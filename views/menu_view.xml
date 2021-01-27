@@ -1,0 +1,24 @@
+<odoo>
+  <data>
+    
+
+    <!-- Top menu item -->
+
+    <menuitem name="Gestion Cooperativa" id="cooperativa_app.menu_root"/>
+
+    <!-- menu categories -->
+
+    <menuitem name="Gestion" id="cooperativa_app.menu_gestion" parent="cooperativa_app.menu_root"/>
+    <menuitem name="Socios" id="cooperativa_app.menu_socios_list" parent="cooperativa_app.menu_gestion"
+              action="cooperativa_app.action_window_socios"/>
+    <menuitem name="Productos" id="cooperativa_app.menu_productos_list" parent="cooperativa_app.menu_gestion"
+              action="cooperativa_app.action_window_productos"/>
+
+    
+    
+    <menuitem name="Campaña" id="cooperativa_app.menu_campanya" parent="cooperativa_app.menu_root"/>
+    <menuitem name="Registros" id="cooperativa_app.menu_campanya_list" parent="cooperativa_app.menu_campanya"
+              action="cooperativa_app.action_window_campanya"/>
+    
+  </data>
+</odoo>

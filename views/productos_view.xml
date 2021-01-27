@@ -1,0 +1,51 @@
+<odoo>
+  <data>
+    <!-- explicit list view definition -->
+
+    <record model="ir.ui.view" id="cooperativa_app.listado_productos_tree">
+      <field name="name">Productos</field>
+      <field name="model">cooperativa_app.productos_model</field>
+      <field name="arch" type="xml">
+        <tree>
+          <field name="name"/>
+          <field name="descripcion"/>
+          <field name="precio"/>
+          <field name="kilosTotales"/>
+        </tree>
+      </field>
+    </record>
+
+    <record model="ir.ui.view" id="cooperativa_app.listado_productos_form">
+      <field name="name">Productos</field>
+      <field name="model">cooperativa_app.productos_model</field>
+      <field name="arch" type="xml">
+        <form>
+          <header>
+            <button name="limpiaKilos" type="object" string="Limpiar Historial" class="oe_highlight" />
+          </header>
+
+          <sheet>
+            
+            <group>
+              <field name="name"/>
+              <field name="descripcion"/>
+              <field name="precio"/>
+              <field name="kilosTotales"/>
+            </group>
+            
+        
+          </sheet>
+
+        </form>
+      </field>
+    </record>
+    <!-- actions opening views on models -->
+
+    <record model="ir.actions.act_window" id="cooperativa_app.action_window_productos">
+      <field name="name">Productos</field>
+      <field name="res_model">cooperativa_app.productos_model</field>
+      <field name="view_mode">tree,form</field>
+    </record>
+
+  </data>
+</odoo>
